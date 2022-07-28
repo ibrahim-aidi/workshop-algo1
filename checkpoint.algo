@@ -1,0 +1,27 @@
+ALGORITHM algo1
+VAR
+  i:INTEGER
+  ch:STRING  
+  l:INTEGER
+  n:INTEGER
+  v:INTEGER
+BEGIN
+l:=0
+n:=0
+v:=0
+i:=1
+ch:=""
+    REPEAT
+        Read(ch[i])
+        ch:=ch+ch[i]
+        l:=l+1
+        IF (ch[i]==" ") THEN
+            n:=n+1
+        END_IF
+        IF (ch[i]=="e" OR ch[i]=="y" OR ch[i]=="a" OR ch[i]=="o" OR ch[i]=="u" OR ch[i]=="i" ) THEN
+            v:=v+1
+        END_IF    
+    UNTIL (ch[i]==".")
+    Write("cette chaine contient ",l,"caractere et ",v,"voyelles et ",n,"mot")
+
+END
